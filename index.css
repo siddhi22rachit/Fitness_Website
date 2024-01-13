@@ -1,0 +1,584 @@
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .video-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  h2{
+    width: 1000px;
+  }
+  
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    margin-top: 100px
+  }
+  .wesite_name{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif  ;
+   
+  }
+  
+  .header-content h1 {
+    font-size: 3em;
+    
+  }
+  
+  .header-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: 
+    left;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 35px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+  }
+ 
+  
+  .btn:hover {
+    background-color: #296c93;
+    color: #fffefe;
+    font-size: 35px;
+  }
+ 
+  
+  @media screen and (max-width: 1000px) {
+    .wesite_name {
+      font-size: 1.5em;
+    }
+    .header-content p {
+      font-size: 1em;
+    }
+  
+    .btn {
+      padding: 8px 16px;
+      font-size: 1em;
+    }
+  }
+
+/* Basic styles for the navbar */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ... (previous CSS styles remain unchanged) */
+
+.navbar {
+  background: transparent;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  /* Additional styling for positioning and alignment */
+  top: 0;
+  margin-left: 0%;
+  text-align: left;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  left: 40%;
+}
+
+.navbar-brand {
+  color: rgb(231, 144, 13);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.nav-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  color: black;
+}
+
+.nav-items li {
+  margin-right: 20px;
+}
+
+.nav-items li:last-child {
+  margin-right: 0;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: rgb(1, 1, 1);
+  font-size: 1.2em;
+  font-weight: bolder;
+  transition: color 0.3s ease;
+  margin-left: 20px;
+}
+
+/* Hamburger menu styles for smaller screens */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  cursor: pointer;
+  font-size: 1.5em;
+  color: rgb(6, 6, 5);
+  display: none;
+}
+
+.nav-items.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(236, 0, 0, 0.9);
+  padding: 10px 0;
+  
+}
+
+.nav-items.active li {
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + .nav-items {
+    display: flex;
+  }
+}
+/* ... (previous CSS styles remain unchanged) */
+
+.nav-items a {
+  text-decoration: none;
+  color: rgb(6, 6, 6);
+  font-size: 0.5em;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-items a:hover {
+  color: #434343;
+}
+
+.nav-items a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  border-bottom: 4px solid rgb(206, 249, 16);
+}
+#main-navbar.scrolled {
+  width: 100%;
+  height: 90px;
+  background: rgb(248, 247, 250); /* Add your desired background color here */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+}
+/* ... (previous CSS styles remain unchanged) */
+
+.middle-text {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.middle-text p {
+  font-size: 1.5em;
+  width: 80%;
+  letter-spacing: -0.44px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+  color: rgb(120, 117, 117);
+}
+.main-line{
+  font-size: 3.5em;
+  color: #000000;
+  font-weight: bolder;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1000px) {
+  .main-line{
+    font-size: 1rem;
+
+  }
+  .middle-text p {
+    font-size: 1.1em; /* Adjust the font size for smaller screens */
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    text-align: center; /* Allow the text to take full width on smaller screens */
+    margin: 0; 
+    margin-left: 60px;
+  }
+}
+/* Common styles for both features sections */
+.features {
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Styles for the first features section */
+.features-1 {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  padding: 0 20px; /* Adjust padding for smaller screens */
+  margin-top: 50px; /* Adjust margin as needed */
+
+  .left-content1 {
+    flex: 1;
+    padding-right: 10px; /* Adjust padding for spacing */
+  }
+
+  .right-content1 {
+    flex: 1;
+    margin-top: 20px; /* Add some margin between text and image */
+    display: flex;
+    align-items: flex-end; /* Align the image to the bottom of the container */
+  }
+
+  .right-content1 img {
+    max-width: 100%;
+    height: auto;
+    align-self: flex-end; /* Align the image to the bottom of its container */
+    padding-left: 10px; /* Adjust padding for spacing */
+  }
+
+  .main-line1 {
+    font-size: 3rem;
+    letter-spacing: -0.84px;
+    line-height: 3.375rem;
+    color: #000000;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 100px;
+  }
+
+  .arrow-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .arrow-link:hover {
+    color: #17435e;
+  }
+}
+
+/* Styles for the second features section */
+.features-2 {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  padding: 0 20px; /* Adjust padding for smaller screens */
+  margin-top: 50px; /* Adjust margin as needed */
+
+.right-content2 {
+    flex: 1;
+    padding-left: 10px; /* Adjust padding for spacing */
+  }
+
+  .left-content2 {
+    flex: 1;
+    margin-top: 20px; /* Add some margin between text and image */
+    display: flex;
+    align-items: flex-end; /* Align the image to the bottom of the container */
+  }
+
+  .left-content2 img {
+    max-width: 100%;
+    height: auto;
+    align-self: flex-end; /* Align the image to the bottom of its container */
+    padding-right: 10px; /* Adjust padding for spacing */
+  }
+
+  .main-line2 {
+    font-size: 3rem;
+    letter-spacing: -0.84px;
+    line-height: 3.375rem;
+    color: #000000;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 100px;
+  }
+
+  .arrow-link2 {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .arrow-link2:hover {
+    color: #17435e;
+  }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1000px) {
+  .features-1 .right-content1,
+  .features-2 .left-content2 {
+    display: var(-80%); /* Hide the image on smaller screens */
+  }
+
+  .features-1 .left-content1,
+  .features-2 .right-content2
+   {
+    flex: 1; /* Full width for text on smaller screens */
+  }
+  .features-1 .main-line1,
+  .features-2 .main-line2 {
+    font-size: 1rem;
+    line-height: normal;
+    /* padding-top: 100px; Adjust font size for smaller screens */
+  }
+
+  .features-1 .arrow-link,
+  .features-2 .arrow-link2 {
+    font-size: 0.5em; /* Adjust font size for smaller screens */
+  }
+  
+}
+
+.paid-text {
+  text-align: center;
+  margin-top: 150px;
+  margin-right: 50px;
+  margin-left: 50 px;
+}
+.paid-text h5 {
+  font: 1.4rem / 2.25rem HelveticaNeueLTStd-Roman-Normalized, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.44px;
+  margin: 3rem auto; /* Set top and bottom margin to 3rem, and auto for left and right to center */
+  max-width: 80%; /* Set a maximum width if needed */
+  text-align: center; /* Center the text */
+  color: rgb(120, 117, 117);
+  margin-bottom: 0%;
+}
+
+
+.main{
+  font-size: 1.5em;
+  color: #000000;
+  font-weight: bolder;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.offers {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow-link {
+  display: inline-block;
+  position: relative;
+  font-size: 1.2em;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.offers .arrow-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; /* Adjust the position of the underline */
+  left: 50%;
+  width: 100%;
+  height: 5px; /* Adjust the thickness of the underline */
+  background-color: yellow; /* Set the color of the underline */
+  transform: translateX(-50%);
+}
+
+.arrow-link:hover {
+  color: #17435e;
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1000px) {
+  .main{
+    font-size: 1.4rem;
+    text-align: center;
+    margin-left: 10%;
+    
+
+  }
+  .offers{
+    text-align: center;
+    margin-left: 10%;
+    font-size: 18px;
+  }
+  .paid-text h5 {
+    font-size: 1rem; /* Adjust the font size for smaller screens */
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    max-width: 100%; /* Allow the text to take full width on smaller screens */
+    margin: 0; 
+    margin-left: 10%;
+    text-align: center;
+  }
+}
+.advertisement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #f7ff09f5;
+  z-index: -1;
+  height: 500px;
+  margin-top: 150px;
+}
+
+.phone-container {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+}
+
+.phone {
+  
+  top: 0;
+  left: -20%;
+  width: 80%;
+  /* width: 140%; Adjust width for 3D effect */
+  transform: rotate(10deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.text-container {
+  width: 45%;
+}
+
+.headline {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  max-width: 100%;
+  font-weight:bolder ;
+}
+
+.download-buttons {
+  display: flex;
+}
+
+.download-button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #296c93;
+  border-radius: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #17435e;
+}
+
+@media screen and (max-width:1000px) {
+  .advertisement {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone-container {
+    display: none;
+  }
+
+  .phone {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .text-container {
+    width: 100%;
+    text-align: center;
+  }
+  .download-button{
+    width: 60%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.footer {
+  background-color: #ffffff;
+  color: #040404;
+  padding: 20px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #0a52f9;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 1000px) {
+  .social-links {
+    flex-direction: column;
+  }
+
+  .social-links a {
+    margin: 5px 0;
+  }
+}
