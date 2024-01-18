@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dbe9ff;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  color: rgb(72, 72, 215);
+  font-family: "Roboto Mono", monospace;
+}
+
+.container {
+  background-color: #f0f9ff;
+  position: relative;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  margin-top: 22%;
+  width: min(90%, 31.25em);
+  padding: 3.75em 0;
+  border-radius: 0.8em;
+  box-shadow: 0 1.97em 3.75em rgba(1, 87, 185, 0.2);
+}
+
+.timer-display {
+  position: relative;
+  width: 110%;
+  background-color: #3c98ff;
+  left: -5%;
+  padding: 1em 0;
+  font-family: "Roboto Mono", monospace;
+  color: #f0f9ff;
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.3em;
+  box-shadow: 0 0.5em 1em rgba(1, 87, 185, 0.2);
+}
+
+.buttons {
+  width: 80%;
+  margin: 3.8em auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons button {
+  font-size: 1.12em;
+  background-color: #dbe9ff;
+  color: #3c98ff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0.5em;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  outline: none;
+}
+
+#start-timer {
+  background-color: #3c98ff;
+  color: #f0f9ff;
+  margin-right: 3%;
+}
+
+#pause-timer {
+  margin-right: 3%;
+}
+
+#reset-timer {
+  margin-right: 3%;
+}
+
+.previous-records {
+ 
+  bottom: 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 2em; /* Adjust the margin as needed */
+ 
+}
+
+.previous-records h2 {
+  font-size: 1.5em;
+  color: #3c98ff;
+  margin-bottom: 1em;
+}
+
+#records-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 2px solid #3c98ff;
+  border-radius: 0.5em;
+  background-color: #f0f9ff;
+  padding: 1em;
+  box-shadow: 0 0.5em 1em rgba(1, 87, 185, 0.2);
+}
+
+#records-list li {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  color: #3c98ff;
+  padding: 0.5em;
+  border-bottom: 1px solid #3c98ff;
+}
+
+#records-list li:last-child {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .buttons {
+    flex-wrap: wrap;
+  }
+
+  .buttons button {
+    width: 48%; /* Two buttons in a row */
+    margin-bottom: 1em;
+  }
+}

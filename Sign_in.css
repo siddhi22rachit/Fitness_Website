@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:'Times New Roman', Times, serif;
+  }
+  .container{
+      background-image: linear-gradient(rgba(0, 0, 50, 0.8),rgba(0,0,50,0.8)),url(https://github.com/sakshimashalkar02/login-signup-page/blob/main/backgrnd.jpg?raw=true);
+      position: relative;
+      height: 100vh;
+      width:100%;
+      background-position: center;
+      background-size: cover;
+  }
+  .navbar-brand {
+    color: rgb(231, 144, 13);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em;
+  }
+  .form-box{
+      position:absolute;
+      width: 90%;
+      max-width: 450px;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      padding: 40px 50px 40px;
+      text-align: center;
+      background-color: azure;
+      border-radius: 30px;
+  }
+  .form-box h1{
+      font-size: 30px;
+      margin-bottom: 60px;
+      color:blue;
+      position: relative;
+  }
+  .form-box h1::after{
+      content: '';
+      width: 30px;
+      height: 4px;
+      border-radius: 3px;
+      position: absolute;
+      bottom: -12px;
+      background-color: blue;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  .input-field{
+      background-color: rgb(199, 218, 218);
+      display: flex;
+      border-radius: 3px;
+      align-items: center;
+      margin: 15px 0;   
+      max-height: 65px;
+      transition: max-height 0.5s;
+      overflow: hidden;
+  }
+  input{
+      width: 100%;
+      background-color: transparent;
+      border:0;
+      outline: 0;
+      padding: 18px 15px;
+  }
+  i{
+      margin-left: 15px;
+      color:darkgrey;
+  
+  }
+  form p{
+      text-align: center;
+      font-size: 13px;
+      color: black;
+  }
+  form a:hover{
+      color:red;
+  }
+  .button-field{
+      width: 100%;
+      justify-content: space-between;
+      display: flex;
+      margin-top: 20px;
+      text-align: center;
+      margin-left: 27%;
+  }
+  .button-field button{
+      cursor: pointer;
+      color: #fff;
+      height: 40px;
+      border-radius: 20px;
+      flex-basis: 48%;
+      border: 0;
+      outline: 0;
+      background-color:blue;
+      transition: transform 0.3s ease-in-out;
+  }
+  .button-field button.disable{
+      background-color: rgb(220, 217, 217);
+      color: rgb(127, 125, 125);
+  }

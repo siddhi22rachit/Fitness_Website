@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Sign Up</title>
+    <link rel="stylesheet" href="Sign_in.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+          <a class="navbar-brand" href="index.html">Sweat Spot</a>
+          <h1 id="title">Sign Up</h1>
+          <form id="signupForm" action="index.php" method="post">
+            <div class="input-group">
+              <div class="input-field" id="namef">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="nameInput" placeholder="Name" name="Name">
+              </div>
+              <div class="input-field">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="emailInput" placeholder="Email" name="Email" required>
+              </div>
+              <div class="input-field" id="callf">
+                <i class="fa-solid fa-phone"></i>
+                <input type="tel" id="contactNumber" placeholder="Contact Number" name="contactNumber">
+                <span id="error-message" style="color: red; font-size: 10px;"></span>
+              </div>
+              
+              <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="passwordInput" placeholder="Password" name="Password">
+              </div>
+              <p><a href="oops.html">Forgot Password?</a></p>
+            </div>
+    
+            <div class="button-field">
+              <button type="button" id="signupb" onclick="signUp()">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+    <script src="Sign_in.js"></script> 
+</body>
+</html>

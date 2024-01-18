@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BMI Calculator</title>
+        <script src="app.js"></script>
+        <style>
+            
+.container { 
+    margin-top: 50px;
+    width: 300px;
+    box-shadow: 0px 0px 20px 10px #8fa1d3;
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+    margin-left: 400px;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #0044ff;
+    width: 50%;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+button {
+    width: 100%;
+    height: 35px;
+    margin-top: 25px;
+    border-radius: 20px;
+    border: none;
+    background-color: #0044ff;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 25px;
+}
+.normal{
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-bottom: 80px;
+}
+.normal h1{
+    font-size: 56px;
+}
+.normal h3{
+    font-size: 30px;
+}
+.normal ol,ul{
+    font-size: 19px;
+}
+
+.hidden {
+    display: none;
+}
+        </style>
+    </head>
+    <body>
+        <!--bmi-->
+        <div class="container">
+            <h1>BMI Calculator</h1>
+            <p>Height (cm)</p>
+            <input type="number" id="height">
+            <p>Weight (kg)</p>
+            <input type="number" id="weight">
+            <button id="btn">Calculate</button>
+            <div id="result"></div>
+        </div>
+
+        <div class="normal hidden" id="1" style="background-color: rgb(192, 235, 129);">
+            <h1> For Normal BMI</h1>
+            <div class="boxmain">
+             <div class="box1"> <h3>General Guidelines:</h3>
+              <ol>
+                <li>Aim for a balanced diet that includes a variety of foods from all food groups.</li>
+                <li> Ensure you are getting adequate protein, healthy fats, carbohydrates, vitamins, and minerals.</li>
+                <li>Focus on whole foods such as fruits, vegetables, whole grains, lean proteins, and healthy fats.</li>
+                <li>Stay hydrated by drinking plenty of water.</li>
+              </ol>
+             </div>
+             <div class="box2">
+                <h3>Plan:</h3>
+                <ul>
+                    <li>Breakfast:Whole-grain cereal with low-fat milk and a serving of fresh berries.
+                    A small serving of nuts for added protein and healthy fats.</li>
+
+                    <li>Lunch:Grilled chicken or tofu salad with a variety of colorful vegetables.
+                    Quinoa or brown rice as a side.</li>
+
+                    <li>Snack:Greek yogurt with a drizzle of honey and a handful of almonds.</li>
+
+                    <li>Dinner:Baked salmon or a vegetarian stir-fry with plenty of vegetables.
+                    Sweet potato or another complex carbohydrate.</li>
+
+                    <li>Snack (if needed):Fresh fruit or a small handful of whole-grain crackers.</li>
+                </ul>
+             </div>
+            </div>
+        </div>
+        <div class="normal hidden"  id="2" style="background-color: rgb(244, 244, 165);">
+            <h1 > For Underweight BMI</h1>
+            <div class="boxmain">
+             <div class="box1"> <h3>General Guidelines:</h3>
+              <ol>
+                <li>Increase calorie intake through nutrient-dense foods.</li>
+                <li>Include healthy fats like avocados, nuts, seeds, and olive oil.</li>
+                <li>Eat protein-rich foods such as lean meats, poultry, fish, beans, and dairy products.</li>
+                <li>Include whole-grain carbohydrates for energy.</li>
+                <li>Consider smaller, more frequent meals to make it easier to consume more calories.</li>
+              </ol>
+             </div>
+             <div class="box2" id="underWeight">
+                <h3>Plan:</h3>
+                <ul>
+                    <li>Breakfast:Whole-grain toast with avocado or peanut butter.
+                    A banana or other fruit.</li>
+                    <li>Mid-Morning Snack:Greek yogurt with granola and a handful of nuts.</li>
+                    <li>Lunch:Turkey or chickpea sandwich with whole-grain bread, loaded with veggies.
+                    A side of vegetable sticks with hummus.</li>
+                    <li>Afternoon Snack:Smoothie with whole milk, banana, berries, and protein powder.</li>
+                   <li>Dinner:Grilled fish or lentil curry with brown rice.
+                    Steamed broccoli or other greens.</li>
+                    <li>Evening Snack:Cottage cheese with pineapple or a handful of trail mix.</li>  
+                </ul>
+             </div>
+            </div>
+        </div>
+        <div class="normal hidden" id="3"  style="background-color: rgb(254, 144, 104);">
+            <h1> For Overweight BMI</h1>
+            <div class="boxmain">
+             <div class="box1"> <h3>General Guidelines:</h3>
+              <ol>
+                <li>Focus on a balanced diet with portion control.</li>
+                <li>Increase intake of fruits and vegetables for fiber and nutrients.</li>
+                <li>Choose lean protein sources such as poultry, fish, beans, and legumes.</li>
+                <li>Opt for whole grains over refined carbohydrates.</li>
+                <li>Limit added sugars and processed foods.</li>
+                <li>Engage in regular physical activity, such as a combination of aerobic exercise and strength training.</li>
+              </ol>
+             </div>
+             <div class="box2">
+                <h3>Plan:</h3>
+                <ul>
+                    <li>Breakfast:Oatmeal with sliced bananas and a sprinkle of chia seeds.A cup of green tea or black coffee.</li>
+                    <li>Lunch:Grilled chicken or chickpea salad with a variety of colorful vegetables.Quinoa or whole-grain couscous as a side.</li>
+                    <li>Afternoon Snack:Greek yogurt with mixed berries.</li>
+                    <li>Dinner:Baked cod or a plant-based protein source.Roasted sweet potatoes and mixed vegetables.</li>
+                    <li>Evening Snack (if needed):Air-popped popcorn or a small handful of almonds.</li>
+                </ul>
+             </div>
+            </div>
+        </div>
+        <div class="normal hidden" id="4" style="background-color: rgb(243, 123, 123);">
+            <h1> For Obesity BMI</h1>
+            <div class="boxmain">
+             <div class="box1"> <h3>General Guidelines:</h3>
+              <ol>
+                <li>Emphasize whole, nutrient-dense foods.</li>
+                <li>Portion control is crucial; pay attention to portion sizes.</li>
+                <li>Choose lean protein sources and incorporate plant-based proteins.</li>
+                <li>A variety of colorful fruits and vegetables for essential nutrients.</li>
+                <li>Opt for whole grains and limit refined carbohydrates.</li>
+                <li>Reduce intake of saturated and trans fats.</li>
+                <li>Limit added sugars and sugary beverages.</li>
+               <li> Engage in regular physical activity, aiming for a mix of aerobic exercises and strength training.</li>
+              </ol>
+             </div>
+             <div class="box2">
+                <h3>Plan:</h3>
+                <ul>
+                    <li>Breakfast:Scrambled eggs with spinach and whole-grain toast.Freshly squeezed orange juice or a piece of whole fruit.</li>
+                    <li>Lunch:Grilled salmon or a plant-based protein source.Quinoa or bulgur with a variety of roasted vegetables.</li>
+                    <li>Afternoon Snack:Vegetable sticks with hummus or a small handful of nuts.</li>
+                    <li>Dinner:Turkey chili with beans and a side salad.Steamed broccoli or another non-starchy vegetable.</li>
+                    <li>Evening Snack (if needed):Greek yogurt with a drizzle of honey or a small serving of fruit.</li>
+                </ul>
+             </div>
+            </div>
+        </div>
+
+
+
+        <script>
+        window.onload = () => {
+  const button = document.querySelector('#btn');
+  button.addEventListener('click', calculateBmi)
+}
+
+function calculateBmi() {
+  const height = document.querySelector('#height').value;
+  const weight = document.querySelector('#weight').value;
+  const result = document.querySelector('#result');
+
+  if (!height || isNaN(height) || height < 0) {
+      result.innerText = "Please provide a valid height";
+      return;
+  } else if (!weight || isNaN(weight) || weight < 0) {
+      result.innerText = "Please provide a valid weight";
+      return;
+  }
+
+  const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+
+  if (bmi < 18.5) {
+  result.innerHTML = `<a href="#2"> Under Weight:</a> ${bmi}`;
+  var elem = document.getElementById('2');
+  elem.classList.toggle('hidden');
+} else if (bmi >= 18.5 && bmi < 24.9) {
+  result.innerHTML = `<a href="#1"> Normal:</a> ${bmi}`;
+  var elem = document.getElementById('1');
+  elem.classList.toggle('hidden');
+} else if (bmi >= 25 && bmi < 29.9) {
+  result.innerHTML = `<a href="#3"> Overweight:</a> ${bmi}`;
+  var elem = document.getElementById('3');
+  elem.classList.toggle('hidden');
+} else if (bmi >= 30 && bmi < 39.9) {
+  result.innerHTML = `<a href="#4"> Obesity:</a> ${bmi}`;
+  var elem = document.getElementById('4');
+  elem.classList.toggle('hidden');
+} else {
+  result.innerText = `Extreme Obesity: ${bmi}`;
+}
+
+
+
+}
+        </script>
+    </body>
+</html>

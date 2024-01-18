@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Success</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    div {
+      text-align: center;
+    }
+
+    #successGif {
+      width: 300px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img id="successGif" src="https://media1.tenor.com/m/OoNNrTOvCnAAAAAC/chicken-chicken-bro.gif" alt="Success GIF">
+    <h1 id="successMessage"></h1>
+    <p>Continue for your fitness journey!</p>
+    <a href="index.html">Continue</a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const username = urlParams.get('username');
+      
+      const successMessageElement = document.getElementById("successMessage");
+      successMessageElement.textContent = `${username}, you have successfully signed up!`;
+    });
+  </script>
+</body>
+</html>

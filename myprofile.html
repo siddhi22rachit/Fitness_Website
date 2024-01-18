@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="myprofile.css">
+  <title>User Profile</title>
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h1>User Profile</h1>
+      
+      <div id="userInfo">
+        <p><strong>Name:</strong> <span id="userName"></span></p>
+        <p><strong>Email:</strong> <span id="userEmail"></span></p>
+        <p><strong>Contact Number:</strong> <span id="userContact"></span></p>
+        <p><strong>Password:</strong> <span id="userPassword"></span></p>
+      </div>
+      <a href="index.html">Continue for your fitness journey!</a>
+    </div>
+  </div>
+
+  <script>
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    const userName = getParameterByName('username');
+    const userEmail = getParameterByName('email');
+    const userContact = getParameterByName('contactNumber');
+    const userPassword = getParameterByName('password');
+
+    document.getElementById('userName').textContent = userName;
+    document.getElementById('userEmail').textContent = userEmail;
+    document.getElementById('userContact').textContent = userContact;
+    document.getElementById('userPassword').textContent = userPassword;
+  </script>
+</body>
+</html>
